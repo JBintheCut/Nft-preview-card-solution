@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: hsl(216, 50%, 16%);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 550px;
+    display: grid;
+}
+
+.container .product-pic {
+    background: url(image-equilibrium.jpg);
+    background-size: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;;
+}
+
+.container .product-pic .product-view {
+    height: 100%;
+    background-color: rgba(2, 252, 252, 0.4);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+}
+
+.container .product-picture .product-view img{
+    width: 40px;
+}
+
+.container .description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+.container .description .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container .description .product-discription,
+.container .description .product-state .time-left,
+.container .description .nft-developer {
+    font-size: 16px;
+    font-weight: 300;
+    color: hsl(215, 51%, 70%);
+}
+
+.container .description .product-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .description .product-state *{
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.container .description .product-state [class],
+.container .description .nft-developer {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.container .description .product-state [class="ethereum"] {
+    width: 10px;
+}
+
+.container .description .product-state [class="clock"] {
+    width: 15px;
+}
+
+.container .description .ethereum-quantity {
+    color: hsl(178, 100%, 50%);
+}
+
+.container .description .developer-avatar {
+    width: 30px;
+    border-radius: 50%;
+    border:  solid 1px hsl(215, 51%, 70%);
+    margin-right: 10px;
+}
+
+.container .description .nft-developer {
+    padding: 16px 0 2px 0;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.container .description .product-state [class="ethereum"],
+.container .description .nft-developer .highlight {
+    font-weight: 400;
+}
+
+.container .description .product-title,
+.container .description .nft-developer .highlight,
+.container .description .product-view {
+    transition: 0.3s ease-out;
+}
+
+.container .description .product-title:hover,
+.container .description .nft-developer .highlight:hover,
+.container .description .product-view:hover {
+    color: hsl(178, 100%, 50%);
+    opacity: 1;
+    cursor: pointer;
+}
